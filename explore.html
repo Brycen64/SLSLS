@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Button</title>
+  <style>
+    .explore-btn {
+      background-color: #333;
+      color: white;
+      padding: 0.8em 1.5em;
+      border: none;
+      border-radius: 0.25em;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .explore-btn:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <button class="explore-btn" onclick="goRandom()">Explore</button>
+
+  <script>
+    function goRandom() {
+      const pages = [
+        'https://sites.google.com/view/slsls/template/shelter-in-ruins',
+        'https://sites.google.com/view/slsls/template/shelter-in-settlement',
+        'https://sites.google.com/view/slsls/template/shelter-in-wasteland',
+        'https://sites.google.com/view/slsls/template/encounter-raiders',
+        'https://sites.google.com/view/slsls/template/encounter-creatures',
+        'https://sites.google.com/view/slsls/template/encounter-machines',
+        'https://sites.google.com/view/slsls/template/forage-abandoned-resource-hub',
+        'https://sites.google.com/view/slsls/template/forage-junkyard',
+        'https://sites.google.com/view/slsls/template/forage-workshop',
+        'https://sites.google.com/view/slsls/template/exposure-in-urban-environment',
+        'https://sites.google.com/view/slsls/template/exposure-to-radiation',
+        'https://sites.google.com/view/slsls/template/exposure-to-weather',
+        'https://sites.google.com/view/slsls/template/exposure-to-nature',
+        'https://sites.google.com/view/slsls/template/socialize-traders',
+        'https://sites.google.com/view/slsls/template/socialize-survivors',
+        'https://sites.google.com/view/slsls/template/socialize-moral-dilemma',
+        'https://sites.google.com/view/slsls/template/quest-for-lore',
+        'https://sites.google.com/view/slsls/template/quest-for-relics-of-the-old-world',
+        'https://sites.google.com/view/slsls/template/quest-for-mysteries',
+        'https://sites.google.com/view/slsls/template/mysterious-lair',
+      ];
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.open(randomPage, "_top"); // navigate parent site
+    }
+  </script>
+</body>
+</html>
