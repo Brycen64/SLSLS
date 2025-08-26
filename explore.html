@@ -16,16 +16,22 @@
       padding-top: 20px; /* space between top edge and button */
     }
 
-    .explore-btn {
-      background-color: #333;
-      color: white;
-      padding: 0.8em 1.5em;
-      border: none;
-      border-radius: 0.25em;
-      font-size: 1rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-      z-index: 1; /* keep button above background */
+.explore-btn {
+  background-color: #333;
+  color: white;
+  padding: 1.5vh 3vw;   /* scales with viewport */
+  border: none;
+  border-radius: 0.5em;
+  font-size: 2vw;       /* larger text relative to viewport */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;           /* keep button above background */
+  min-width: 15vw;      /* at least 15% of viewport width */
+  min-height: 10vh;     /* makes it taller on taller screens */
+}
+
+.explore-btn:hover {
+  background-color: #555;
     }
 
     .explore-btn:hover {
@@ -66,3 +72,4 @@
   </script>
 </body>
 </html>
+
