@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Button</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* center horizontally */
+      align-items: flex-start; /* align to top */
+      background: url('https://raw.githubusercontent.com/Brycen64/SLSLS/main/Forest.png') 
+                  no-repeat center top;
+      background-size: cover; /* make the image scale to fit */
+      padding-top: 20px; /* space between top edge and button */
+    }
+
+.explore-btn {
+  background-color: #333;
+  color: white;
+  padding: 1.5vh 3vw;   /* scales with viewport */
+  border: none;
+  border-radius: 0.5em;
+  font-size: 2vw;       /* larger text relative to viewport */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 1;           /* keep button above background */
+  min-width: 15vw;      /* at least 15% of viewport width */
+  min-height: 10vh;     /* makes it taller on taller screens */
+}
+
+.explore-btn:hover {
+  background-color: #555;
+    }
+
+    .explore-btn:hover {
+      background-color: #555;
+    }
+  </style>
+</head>
+<body>
+  <button class="explore-btn" onclick="goRandom()">Enter the Forest</button>
+
+  <script>
+    function goRandom() {
+      const pages = [
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/dungeon',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/quests',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Foraging',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Foraging',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Foraging',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Foraging',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Foraging',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Landmark',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Obstacle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Adventurer',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/mystical-phenomena',
+        'https://sites.google.com/view/solosaga/journey/wilderness/events/Shrine',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/brute',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/warg',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/skulkers',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/rampager',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/stag',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/creeper',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/prowler',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/cloaker',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/eagle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/brute',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/warg',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/skulkers',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/rampager',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/stag',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/creeper',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/prowler',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/cloaker',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/eagle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/brute',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/warg',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/skulkers',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/rampager',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/stag',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/creeper',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/prowler',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/cloaker',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/eagle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/brute',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/warg',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/skulkers',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/rampager',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/stag',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/creeper',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/prowler',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/cloaker',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/eagle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/brute',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/warg',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/skulkers',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/rampager',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/stag',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/creeper',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/prowler',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/cloaker',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-beasts/eagle',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/bandit',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/bounty-hunter',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/Highwayman',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/assassin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/merry-men',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/deserters',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/fairy',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/will-o-wisp',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/griffin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/basilisk',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/wyvern',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dragon',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/golem',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dryad',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/nymph',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cockatrice',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/troll',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cyclops',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/giant',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/Ogre',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/unicorn',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/fairy',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/will-o-wisp',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/griffin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/basilisk',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/wyvern',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dragon',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/golem',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dryad',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/nymph',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cockatrice',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/troll',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cyclops',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/giant',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/Ogre',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/unicorn',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/fairy',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/will-o-wisp',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/griffin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/basilisk',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/wyvern',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dragon',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/golem',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dryad',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/nymph',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cockatrice',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/troll',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cyclops',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/giant',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/Ogre',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/unicorn',
+      ];
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.open(randomPage, "_blank"); // ✅ always open new tab
+    }
+  </script>
+</body>
+</html>
+
