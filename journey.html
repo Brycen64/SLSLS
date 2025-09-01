@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Explore Buttons</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center; /* center horizontally */
+      align-items: center;     /* center vertically */
+      background: url('https://raw.githubusercontent.com/Brycen64/SLSLS/main/Journey.png') 
+                  no-repeat center top;
+      background-size: cover;
+    }
+
+    .button-grid {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-template-rows: auto auto auto;
+      gap: 10px;
+      justify-items: center;
+      align-items: center;
+    }
+
+    .explore-btn {
+      background-color: #333;
+      color: white;
+      padding: 1.5vh 3vw;
+      border: none;
+      border-radius: 0.5em;
+      font-size: clamp(16px, 2vw, 32px);
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      z-index: 1;
+      min-width: 15vw;
+      min-height: 10vh;
+    }
+
+    .explore-btn:hover {
+      background-color: #555;
+      transform: scale(1.05);
+    }
+
+    /* Compass placement */
+    .north   { grid-column: 2; grid-row: 1; }
+    .west    { grid-column: 1; grid-row: 2; }
+    .east    { grid-column: 3; grid-row: 2; }
+    .south   { grid-column: 2; grid-row: 3; }
+  </style>
+</head>
+<body>
+  <div class="button-grid">
+    <button class="explore-btn north" onclick="goNorth()">Head North</button>
+    <button class="explore-btn west"  onclick="goWest()">Head West</button>
+    <button class="explore-btn east"  onclick="goEast()">Head East</button>
+    <button class="explore-btn south" onclick="goSouth()">Head South</button>
+  </div>
+
+  <script>
+    function goNorth() {
+      const pages = [
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/cavern.html',
+        'https://brycen64.github.io/SLSLS/cavern.html',
+        'https://brycen64.github.io/SLSLS/cavern.html',
+        'https://brycen64.github.io/SLSLS/mountain.html',
+        'https://brycen64.github.io/SLSLS/mountain.html',
+        'https://brycen64.github.io/SLSLS/mountain.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+      ];
+      openRandom(pages);
+    }
+
+    function goSouth() {
+      const pages = [
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+        'https://brycen64.github.io/SLSLS/lake.html',
+        'https://brycen64.github.io/SLSLS/swamp.html',
+      ];
+      openRandom(pages);
+    }
+
+    function goEast() {
+      const pages = [
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/lake.html',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+        'https://sites.google.com/view/solosaga/journey/urban/city',
+      ];
+      openRandom(pages);
+    }
+
+    function goWest() {
+      const pages = [
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/highlands.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/forest.html',
+        'https://brycen64.github.io/SLSLS/lake.html',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+        'https://sites.google.com/view/solosaga/journey/urban/town',
+        'https://sites.google.com/view/solosaga/journey/urban/village',
+        'https://sites.google.com/view/solosaga/journey/urban/city',
+        'https://sites.google.com/view/solosaga/journey/urban/city',
+      ];
+      openRandom(pages);
+    }
+
+    // helper to open random page from a list
+    function openRandom(pages) {
+      const randomPage = pages[Math.floor(Math.random() * pages.length)];
+      window.open(randomPage, "_blank");
+    }
+  </script>
+</body>
+</html>
