@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // List of pages to randomly choose from
+    const pages = [
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/fairy',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/will-o-wisp',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/griffin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/basilisk',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/wyvern',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dragon',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/golem',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/dryad',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/nymph',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cockatrice',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/troll',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/cyclops',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/giant',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/ogre',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-folklore/unicorn',
+    ];
+
+    // Pick a random index
+    const randomIndex = Math.floor(Math.random() * pages.length);
+
+    // Redirect immediately
+    window.location.replace(pages[randomIndex]);
+  </script>
+</head>
+<body>
+</body>
+</html>

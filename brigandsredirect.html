@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Redirecting...</title>
+  <script>
+    // List of pages to randomly choose from
+    const pages = [
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/bandit',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/bounty-hunter',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/highwayman',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/assassin',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/merry-men',
+        'https://sites.google.com/view/solosaga/journey/wilderness/encounters/encounter-brigands/deserters',
+    ];
+
+    // Pick a random index
+    const randomIndex = Math.floor(Math.random() * pages.length);
+
+    // Redirect immediately
+    window.location.replace(pages[randomIndex]);
+  </script>
+</head>
+<body>
+</body>
+</html>
